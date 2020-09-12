@@ -144,7 +144,7 @@ class UserService
         
         $databaseSaveResult = $user->save();
                 
-        if(!$databaseSaveResult->success) {
+        if(!$databaseSaveResult) {
             return FunctionResult::error("Database error");
         }
     
