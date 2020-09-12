@@ -535,7 +535,7 @@ final class UserController extends Controller
         $service->register(new RegisterUserDto(
             UserName::create($request['name']),
             Email::create($request['email']),
-            DateTime::createFromFormat('some format', $request)
+            DateTime::createFromFormat('some format', $request['birth_date'])
         ));
         
         //return ok response
